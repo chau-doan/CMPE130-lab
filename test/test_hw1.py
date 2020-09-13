@@ -164,6 +164,16 @@ class Test_UF(object):
         assert expected == actual
 
 test = Test_UF()
+test.test_one()
+test.test_two()
+test.test_qf_not_connected()
+test.test_qf_connected()
 test.setup_class()
+test.test_qu_not_connected()
+test.test_qu_connected()
+test.test_wqu_not_connected()
+test.test_wqu_connected()
+test.test_pqu_not_connected()
+test.test_pqu_connected()
 test.test_wpqu_not_connected()
 test.test_wpqu_connected()
