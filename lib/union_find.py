@@ -117,6 +117,7 @@ class UF(object):
 
     def pqu_find(self, a):
 
+
         while a != self.id[a]:
             self.id[a] = self.id[self.id[a]]
             a = self.id[a]
@@ -188,7 +189,7 @@ class UF(object):
 if __name__ == "__main__":
 
     # iteration
-    set_szs = [10**1, 10**2, 10**3, 10**4]
+    set_szs = [10**1, 10**2, 10**3, 10**4, 10**5, 10**6]
     timing = []
 
     # gives the timing for union operation only, you might want to do this for all functions you wrote.
