@@ -6,11 +6,7 @@
 
 import time
 import random
-#import matplotlib.pyplot as plt
-
-#from test.test_hw1 import Test_UF
-
-
+import matplotlib.pyplot as plt
 
 class UF(object):
     """Union Find class
@@ -192,7 +188,7 @@ class UF(object):
 if __name__ == "__main__":
 
     # iteration
-    set_szs = [10]
+    set_szs = [10**1, 10**2, 10**3, 10**4]
     timing = []
 
     # gives the timing for union operation only, you might want to do this for all functions you wrote.
@@ -219,11 +215,11 @@ if __name__ == "__main__":
 
     # this plots things in log scale (pls google it), you need to add matplotlib to your virtualenv first!
 
-    #plt.plot()
-    #plt.xscale('log')
-    #plt.yscale('log')
-    #plt.title('plot')
-    #plt.ylabel('some numbers')
-    #plt.show()
+    plt.plot(set_szs, timing)
+    plt.xscale('log')
+    plt.yscale('log')
+    plt.title('plot')
+    plt.ylabel('some numbers')
+    plt.show()
 
 
