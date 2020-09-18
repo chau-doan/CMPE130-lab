@@ -189,7 +189,7 @@ class UF(object):
 if __name__ == "__main__":
 
     # iteration
-    set_szs = [10**1, 10**2, 10**3, 10**4, 10**5, 10**6]
+    set_szs = [10**1, 10**2, 10**3, 10**4, 10**5, 10**6, 10**7, 10**8]
     timing = []
 
     # gives the timing for union operation only, you might want to do this for all functions you wrote.
@@ -204,7 +204,7 @@ if __name__ == "__main__":
             rp = random.randint(0, set_sz - 1)
             rq = random.randint(0, set_sz - 1)
 
-            inodes.qf_union(rp, rq)
+            inodes.wpqu_union(rp, rq)
 
         t1 = time.time()
 
