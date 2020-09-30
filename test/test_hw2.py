@@ -98,3 +98,8 @@ class Test_UF(object):
         assert expected == actual
 
 
+test = Test_UF()
+test.setup_class()
+test.test_one()
+test.test_two()
+test.test_insertion_sort_0()
