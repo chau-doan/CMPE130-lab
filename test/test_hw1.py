@@ -1,5 +1,5 @@
 
-import lib.union_find
+import lib.hw1.union_find
 
 class Test_UF(object):
     @classmethod
@@ -19,7 +19,7 @@ class Test_UF(object):
     def test_qf_not_connected(self):
 
         # initialize network nodes
-        inodes = lib.union_find.UF()
+        inodes = lib.hw1.union_find.UF()
         inodes.qf_init(10)
 
         # test if (1, 2) is connected
@@ -32,7 +32,7 @@ class Test_UF(object):
     def test_qf_connected(self):
 
         # initialize network nodes
-        inodes = lib.union_find.UF()
+        inodes = lib.hw1.union_find.UF()
         inodes.qf_init(10)
 
         # connect (1, 2)
@@ -48,7 +48,7 @@ class Test_UF(object):
     def test_qu_not_connected(self):
 
         # initialize network nodes
-        inodes = lib.union_find.UF()
+        inodes = lib.hw1.union_find.UF()
         inodes.qf_init(10)
 
         # test if (1, 2) is connected
@@ -61,7 +61,7 @@ class Test_UF(object):
     def test_qu_connected(self):
 
         # initialize network nodes
-        inodes = lib.union_find.UF()
+        inodes = lib.hw1.union_find.UF()
         inodes.qf_init(10)
 
         # connect (1, 2)
@@ -78,7 +78,7 @@ class Test_UF(object):
     def test_wqu_not_connected(self):
 
         # initialize network nodes
-        inodes = lib.union_find.UF()
+        inodes = lib.hw1.union_find.UF()
         inodes.qf_init(10)
 
         # test if (1, 2) is connected
@@ -91,7 +91,7 @@ class Test_UF(object):
     def test_wqu_connected(self):
 
         # initialize network nodes
-        inodes = lib.union_find.UF()
+        inodes = lib.hw1.union_find.UF()
         inodes.qf_init(10)
 
         # connect (1, 2)
@@ -108,7 +108,7 @@ class Test_UF(object):
     def test_pqu_not_connected(self):
 
         # initialize network nodes
-        inodes = lib.union_find.UF()
+        inodes = lib.hw1.union_find.UF()
         inodes.qf_init(10)
 
         # test if (1, 2) is connected
@@ -121,7 +121,7 @@ class Test_UF(object):
     def test_pqu_connected(self):
 
         # initialize network nodes
-        inodes = lib.union_find.UF()
+        inodes = lib.hw1.union_find.UF()
         inodes.qf_init(10)
 
         # connect (1, 2)
@@ -137,7 +137,7 @@ class Test_UF(object):
     def test_wpqu_not_connected(self):
 
         # initialize network nodes
-        inodes = lib.union_find.UF()
+        inodes = lib.hw1.union_find.UF()
         inodes.qf_init(10)
 
         # test if (1, 2) is connected
@@ -150,7 +150,7 @@ class Test_UF(object):
     def test_wpqu_connected(self):
 
         # initialize network nodes
-        inodes = lib.union_find.UF()
+        inodes = lib.hw1.union_find.UF()
         inodes.qf_init(10)
 
         # connect (1, 2)
@@ -162,18 +162,3 @@ class Test_UF(object):
         expected = True
 
         assert expected == actual
-
-test = Test_UF()
-test.test_one()
-test.test_two()
-test.test_qf_not_connected()
-test.test_qf_connected()
-test.setup_class()
-test.test_qu_not_connected()
-test.test_qu_connected()
-test.test_wqu_not_connected()
-test.test_wqu_connected()
-test.test_pqu_not_connected()
-test.test_pqu_connected()
-test.test_wpqu_not_connected()
-test.test_wpqu_connected()
