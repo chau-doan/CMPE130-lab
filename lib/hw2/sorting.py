@@ -19,6 +19,7 @@ class Sorting(object):
 
 
     def sort_init(self, N):
+
         """initialize the data structure
 
         """
@@ -63,14 +64,21 @@ class Sorting(object):
         return self.id
 
     def insertion_sort(self):
-        """Insertion sort is a simple sorting algorithm that builds the final
+        """"Insertion sort is a simple sorting algorithm that builds the final
         sorted array (or list) one item at a time. More efficient in practice
         than most other simple quadratic (i.e., O(n^2)) algorithms such as
         selection sort or bubble sort specifically an
 
         """
+        for i in range(1, len(self.id)):
+            key = self.id[i]
+            j = i-1
+            while j >= 0 and key < self.id[j]:
+                self.id[j+1] = self.id[j]
+                j -= 1
+            self.id[j+1] = key
 
-        return 1
+        return self.id
 
     def shell_sort(self):
         """Shell sort also known as  or Shell's method, is an in-place comparison sort.
