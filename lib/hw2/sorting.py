@@ -17,7 +17,6 @@ class Sorting(object):
     def __init__(self):
         self.id = []
 
-
     def sort_init(self, N):
 
         """initialize the data structure
@@ -29,9 +28,7 @@ class Sorting(object):
         except ValueError:
             print('Sample size exceeded population size.')
 
-
         self.id = [random.randint(0, N - 1) for i in range(N)]
-
 
     def get_id(self):
         """initialize the data structure
@@ -39,7 +36,6 @@ class Sorting(object):
         """
 
         return self.id
-
 
     def selection_sort(self):
         """Selection sort algorithm is an
@@ -61,7 +57,6 @@ class Sorting(object):
             self.id[i_idx] = self.id[min]
             self.id[min] = temp
 
-
         return self.id
 
     def insertion_sort(self):
@@ -82,9 +77,6 @@ class Sorting(object):
         return self.id
 
 
-
-
-    @property
     def shell_sort(self):
         """Shell sort also known as  or Shell's method, is an in-place comparison sort.
         It can be seen as either a generalization of sorting by exchange (bubble sort)
@@ -92,19 +84,19 @@ class Sorting(object):
 
         """
         h = 1
-        while h < len(self.id)/2:
-            h = 2 * h + 1
+        while h < len(self.id)/3:
+            h = 3*h + 1
         while h >= 1:
             k = int(h)
             for i in range(k, len(self.id)):
                 for j in range(i, k-1, -k):
                     if self.id[j] < self.id[j-k]:
-                        key = self.id[j]
+                        temp = self.id[j]
                         self.id[j] = self.id[j-k]
-                        self.id[j-k] = key
+                        self.id[j-k] = temp
                     else:
                         break
-            h = h/2
+            h = int(h)/3
 
         return self.id
 
@@ -139,7 +131,6 @@ class Sorting(object):
             self.id[k-1] = self.id[j-1]
             self.id[j-1] = temp
             k = j
-
 
     def merge_sort(self):
         """Merge sort is a divide and conquer algorithm that was invented
@@ -221,6 +212,11 @@ class Sorting(object):
         j = self.partition(lo, hi)
         self.sort(lo, j-1)
         self.sort(j+1, hi)
+
+test = Sorting()
+test.sort_init(10)
+test.shell_sort()
+print(test.shell_sort())
 
 if __name__ == "__main__":
     # iteration
